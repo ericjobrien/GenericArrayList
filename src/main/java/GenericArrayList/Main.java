@@ -58,8 +58,23 @@ public class Main {
         genericArrayList.addToArray('I', newChArr5);
         genericArrayList.addToArray('C', newChArr5);
 
+        ;
 
-        System.out.println("chArr5: " + Arrays.toString(newChArr5));
+        System.out.println(genericArrayList.getValueFromIndex(2));
+
+        for (Object element : genericArrayList.getGenericArray()) {
+            System.out.println(element);
+        }
+        System.out.println(genericArrayList.isPresent('A'));
+
+        char a = 'A';
+        char b = (char) genericArrayList.getValueFromIndex(2);
+
+        System.out.println(String.valueOf(Arrays.toString(genericArrayList.getGenericArray())));
+        System.out.println(genericArrayList.isPresent('B'));
+
+        genericArrayList.setGenericArray(intArr);
+        System.out.println(genericArrayList.isPresent(100));
     } //end of main method
 
 }

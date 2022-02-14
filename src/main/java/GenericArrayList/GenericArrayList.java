@@ -123,13 +123,32 @@ public class GenericArrayList<T> {
 
         }
 
-
-
-
-
     }
 
-    //    public static <T> void genericToString(T[] elements) {
+    public T getValueFromIndex(int index) {
+        return this.genericArray[index];
+    }
+
+    public Boolean isPresent(T element) {
+
+        T checkElement;
+        for(int i = 0; i < this.genericArray.length; i++) {
+            checkElement = this.genericArray[i];
+
+            while(!this.genericArray[i].equals(null)) {
+                if(this.genericArray[i].equals(element)) {
+                    return true;
+                } else {
+                    break;
+                }
+            }
+        }
+
+
+        return false;
+    }
+
+//        public static <T> void genericToString(T[] elements) {
 //        for(T element : elements) {
 //            System.out.printf("%s ", element);
 //            System.out.println();
